@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Flow Helpers";
+}
+
+<div class="jumbotron bg-fancy">
+    <h2>@ViewBag.Title API Documentation</h2>
+    <p>
+        API documentation for call methods is available in the API Help page. The flow connector is currently under development and will be available once approved.
+    </p>
+    <p>@Html.ActionLink("Documentation", "Index", "Help", new { area = "" }, new { @class = "btn btn-secondary" })</p>
+</div>

@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="form-horizontal form col">
+            <fieldset>
+
+                <!-- Form Name -->
+                <h2 class="col">Register New User</h2>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="emailaddress">Email Address</label>
+                    <div class="col-md-4">
+                        <input id="emailaddress" name="emailaddress" type="text" placeholder="Email Address" class="form-control input-md">
+                        <span class="help-block">Your email address will be your username</span>
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="password">Password</label>
+                    <div class="col-md-4">
+                        <input id="password" name="password" type="password" placeholder="Password" class="form-control input-md">
+                    </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="form-group">
+                    <label class="col-md-4 col-form-label" for="confirmpassword">Confirm Password</label>
+                    <div class="col-md-4">
+                        <input id="confirmpassword" name="confirmpassword" type="password" placeholder="Confirm Password" class="form-control input-md">
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="register"></label>
+                    <div class="col-md-4">
+                        <button id="register" name="register" class="btn btn-primary">Register</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+        <div class="modal fade" tabindex="-1" id="successModal" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p>Success</p>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+
+                    </div>
+                    <div class="modal-body">
+                        <p>Registration successful</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="errormessage" class="alert alert-danger collapse">
+            <a id="closelink" class="close" href="#">&times;</a>
+            <div id="errortext"></div>
+        </div>
+    </div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#register').click(function () {
+            $.ajax({
+                url: '/api/account/register',
+                method: 'POST',
+                data: {
+                    email: $('#emailaddress').val(),
+                    password: $('#password').val(),
+                    confirmPassword: $('#confirmpassword').val(),
+                },
+                success: function () {
+                    $('#successModal').modal('show');
+                },
+                error: function (jqXHR) {
+                    $('#errortext').text(jqXHR.responseText);
+                    $('#errormessage').show('fade');
+                }
+            });
+        });
+
+        $('#closelink').click(function () {
+            $('#errormessage').hide('fade');
+        });
+    });
+</script>

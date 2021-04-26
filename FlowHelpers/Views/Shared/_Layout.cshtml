@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                <img width="30" height="30" class="d-inline-block align-top" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sbnM6c3ZnanM9Imh0dHA6Ly9zdmdqcy5jb20vc3ZnanMiIHZlcnNpb249IjEuMSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBjbGFzcz0iIj48Zz4KPGxpbmVhckdyYWRpZW50IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAiIHkxPSIyNTgiIHgyPSI1MTIiIHkyPSIyNTgiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCA1MTQpIj48c3RvcCBzdG9wLW9wYWNpdHk9IjEiIHN0b3AtY29sb3I9IiNkZjY1NGUiIG9mZnNldD0iMC4zNTEzNTEzNTEzNTEzNTEzNyIvPjxzdG9wIHN0b3Atb3BhY2l0eT0iMSIgc3RvcC1jb2xvcj0iI2ZkY2I2ZSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzFfKTsiIGQ9Ik0xMzcuOTk2LDIxNy4yMTNjLTY2LjQwMiwwLTEwMC43My0yOS40NDYtMTMxLjAxNy01NS40MjYgIGMtOC4zODQtNy4xOTEtOS4zNTEtMTkuODE4LTIuMTU5LTI4LjIwMmM3LjE5MS04LjM4NSwxOS44MTgtOS4zNTEsMjguMjAyLTIuMTU5YzI4LjY0MiwyNC41NjksNTMuMzc4LDQ1Ljc4NywxMDQuOTc0LDQ1Ljc4NyAgYzUxLjU5OCwwLDc2LjMzNi0yMS4yMTksMTA0Ljk4LTQ1Ljc4N0MyNzMuMjY1LDEwNS40NDYsMzA3LjU5NSw3NiwzNzMuOTk4LDc2YzY2LjQwMSwwLDEwMC43MzEsMjkuNDQ0LDEzMS4wMiw1NS40MjQgIGM4LjM4NCw3LjE5LDkuMzUzLDE5LjgxOCwyLjE2MSwyOC4yMDJjLTcuMTkxLDguMzg1LTE5LjgxNiw5LjM1NC0yOC4yMDEsMi4xNjFDNDUwLjMzMywxMzcuMjE4LDQyNS41OTUsMTE2LDM3My45OTgsMTE2ICBjLTUxLjU5OSwwLTc2LjMzNiwyMS4yMTktMTA0Ljk4LDQ1Ljc4N0MyMzguNzI5LDE4Ny43NjcsMjA0LjM5OSwyMTcuMjEzLDEzNy45OTYsMjE3LjIxM3ogTTI2OS4wMTgsMjcxLjE4MSAgYzI4LjY0NC0yNC41NjgsNTMuMzgyLTQ1Ljc4NywxMDQuOTgtNDUuNzg3YzUxLjU5OSwwLDc2LjMzNywyMS4yMTksMTA0Ljk4LDQ1Ljc4N2M4LjM4NSw3LjE5MSwyMS4wMTEsNi4yMjUsMjguMjAyLTIuMTU5ICBjNy4xOTEtOC4zODUsNi4yMjUtMjEuMDExLTIuMTYtMjguMjAyYy0zMC4yODktMjUuOTc5LTY0LjYxOS01NS40MjYtMTMxLjAyMi01NS40MjZTMjczLjI2NSwyMTQuODQsMjQyLjk3NiwyNDAuODIgIGMtMjguNjQ0LDI0LjU2OC01My4zODIsNDUuNzg3LTEwNC45OCw0NS43ODdjLTUxLjU5NywwLTc2LjMzMi0yMS4yMTgtMTA0Ljk3NC00NS43ODdjLTguMzg0LTcuMTkxLTIxLjAxLTYuMjI2LTI4LjIwMiwyLjE1OSAgYy03LjE5Miw4LjM4NC02LjIyNSwyMS4wMTEsMi4xNTksMjguMjAyYzMwLjI4OCwyNS45NzksNjQuNjE2LDU1LjQyNiwxMzEuMDE3LDU1LjQyNiAgQzIwNC4zOTksMzI2LjYwNiwyMzguNzI5LDI5Ny4xNiwyNjkuMDE4LDI3MS4xODF6IE0yNjkuMDE4LDM4MC41NzRjMjguNjQ0LTI0LjU2OCw1My4zODItNDUuNzg3LDEwNC45OC00NS43ODcgIGM1MS41OTksMCw3Ni4zMzcsMjEuMjE5LDEwNC45OCw0NS43ODdjOC4zODUsNy4xOTEsMjEuMDExLDYuMjI1LDI4LjIwMi0yLjE1OWM3LjE5MS04LjM4NSw2LjIyNS0yMS4wMTEtMi4xNi0yOC4yMDIgIGMtMzAuMjg5LTI1Ljk3OS02NC42MTktNTUuNDI2LTEzMS4wMjItNTUuNDI2cy0xMDAuNzMzLDI5LjQ0Ni0xMzEuMDIyLDU1LjQyNkMyMTQuMzMyLDM3NC43ODEsMTg5LjU5NCwzOTYsMTM3Ljk5NiwzOTYgIGMtNTEuNTk0LDAtNzYuMzMxLTIxLjIxOC0xMDQuOTczLTQ1Ljc4NWwtMC4wMDItMC4wMDJjLTguMzg0LTcuMTg5LTIxLjAwOS02LjIyMy0yOC4yMDEsMi4xNiAgYy03LjE5MSw4LjM4NC02LjIyNCwyMS4wMTEsMi4xNiwyOC4yMDJDMzcuMjY4LDQwNi41NTUsNzEuNTk3LDQzNiwxMzcuOTk2LDQzNkMyMDQuMzk5LDQzNiwyMzguNzI5LDQwNi41NTQsMjY5LjAxOCwzODAuNTc0eiIgZmlsbD0iIi8+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4K" alt="" />
+                @Html.ActionLink("Flow Helpers", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("API", "Index", "Help", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid body-content my-2">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - MCA Managed Services</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

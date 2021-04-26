@@ -1,0 +1,35 @@
+@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using System.Collections.ObjectModel
+@using FlowHelpers.Areas.HelpPage.Models
+@model Collection<ApiDescription>
+
+@{
+    ViewBag.Title = "Flow Helpers API Documentation";
+
+    // Group APIs by controller
+    ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
+}
+
+<link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<div class="col">
+
+                <h1>@ViewBag.Title</h1>
+
+</div>
+<div id="body" class="help-page clearfix">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p></p>
+        </div>
+    </section>
+    <div class="col-lg">
+        <section class="content-wrapper main-content clear-fix">
+            @foreach (var group in apiGroups)
+            {
+                @Html.DisplayFor(m => group, "ApiGroup")
+            }
+        </section>
+    </div>
+</div>
